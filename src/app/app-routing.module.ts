@@ -33,7 +33,8 @@ const appRoutes: Routes =[
     @NgModule({
 
     imports:[
-        RouterModule.forRoot(appRoutes)
+      // RouterModule.forRoot(appRoutes, {useHash: true})// hash mode routing to parse the url at the server or client
+      RouterModule.forRoot(appRoutes)
     ],
     exports: [RouterModule]
 
