@@ -7,7 +7,7 @@ import { Subscription } from 'rxjs';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-export class UserComponent implements OnInit, OnDestroy {
+export class UserComponent implements OnInit {
   user: {id: number, name: string};
   paramsSubscription: Subscription;
   constructor(private route: ActivatedRoute) { }
@@ -25,10 +25,10 @@ export class UserComponent implements OnInit, OnDestroy {
     });
 
   }
-  ngOnDestroy(){
-    this.paramsSubscription.unsubscribe();
+  // ngOnDestroy(){
+  //   this.paramsSubscription.unsubscribe();
 
-  }
+  // }
 
 
 }
